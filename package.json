@@ -1,0 +1,50 @@
+{
+    "name": "react-mentoring",
+    "version": "1.0.0",
+    "description": "Netflixroulette. React mentoring application.",
+    "scripts": {
+        "api": "node src/api.js",
+        "develop": "npx http-server ./src -p 3000 -o -c-1",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lighttree/react-mentoring.git"
+    },
+    "keywords": [
+        "mentoring",
+        "netflix",
+        "react",
+        "express"
+    ],
+    "author": "Viktor Busko <viktor_busko@epam.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Lighttree/react-mentoring/issues"
+    },
+    "homepage": "https://github.com/Lighttree/react-mentoring#readme",
+    "eslintConfig": {
+        "extends": "airbnb",
+        "env": {
+            "browser": true,
+            "node": true
+        },
+        "rules": {
+            "comma-dangle": ["error", "never"],
+            "indent": ["error", 4],
+            "linebreak-style": 0,
+            "react/jsx-indent": ["error", 4],
+            "react/jsx-no-undef": [true, { "allowGlobals": true }]
+        }
+    },
+    "dependencies": {
+        "express": "^4.16.4"
+    },
+    "devDependencies": {
+        "eslint": "^5.3.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.11.0"
+    }
+}
