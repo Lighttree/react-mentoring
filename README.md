@@ -1,29 +1,42 @@
-# Task 1 (Core concepts lecture)
+# Taks 2 (Webpack lecture)
 
-Install and launch “blank” node.js application. You’ll need it in further development for implementing SSR. Commit the changes to repository.
+## Description
 
-Don’t use any generators (like create-react-app)
+> Create package.json file and install React, Redux, React-Redux, > React-Router, Jest.
+>
+> Install and configure webpack & babel to get build artifact by running npm command
+>
+> Set DEV and PROD build configuration. Use env variables, dev server, optimizations for PROD build
+>
+> Set up testing. You should have test command in your package.json file, which will run your future tests. Don’t use React boilerplate for this task.
 
-Create components in different ways, using:
+## Available Scripts
 
-* React.createElement
-* React.Component
-* React.PureComponent
-* functional components
+In the project directory, you can run:
 
-## Development
+### `npm start`
 
-```
-npm install
-```
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### React
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-```
-npm run develop
-```
+### `npm test`
 
-### API
+Launches the test runner in the interactive watch mode.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+### `npm run api`
+
+Launches `Node` application with application `API`.
 
 ```
 npm run api

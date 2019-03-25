@@ -30,21 +30,40 @@
             "node": true
         },
         "rules": {
-            "comma-dangle": ["error", "never"],
-            "indent": ["error", 4],
+            "comma-dangle": [
+                "error",
+                "never"
+            ],
+            "indent": [
+                "error",
+                4
+            ],
             "linebreak-style": 0,
-            "react/jsx-indent": ["error", 4],
-            "react/jsx-no-undef": [true, { "allowGlobals": true }]
+            "react/jsx-indent": [
+                "error",
+                4
+            ],
+            "react/jsx-no-undef": [
+                true,
+                {
+                    "allowGlobals": true
+                }
+            ]
         }
     },
     "dependencies": {
-        "express": "^4.16.4"
+        "express": "^4.16.4",
+        "react": "^16.8.5",
+        "react-redux": "^6.0.1",
+        "react-router": "^5.0.0",
+        "redux": "^4.0.1"
     },
     "devDependencies": {
         "eslint": "^5.3.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.14.0",
         "eslint-plugin-jsx-a11y": "^6.1.1",
-        "eslint-plugin-react": "^7.11.0"
+        "eslint-plugin-react": "^7.11.0",
+        "jest": "^24.5.0"
     }
 }
