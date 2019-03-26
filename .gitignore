@@ -62,3 +62,6 @@ typings/
 
 # vscode extensions
 .history
+
+# application dist
+dist
