@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-function MovieFilter({ className, title, filters }) {
+function ResultsFilter({ className, title, filters }) {
     const filtersList = filters.map((filter, index) => (
         <React.Fragment key={`filterRadioFragment_${filter}`}>
             <input
@@ -11,35 +10,41 @@ function MovieFilter({ className, title, filters }) {
                 name={`filter_${title.split(' ').join('_')}`}
                 id={`filterRadio_${filter}`}
                 value={filter}
-                className="movie-filter__radio"
+                className="results-filter__radio"
                 defaultChecked={index === 0}
             />
             <label
                 key={`filterRadioLabel_${filter}`}
                 htmlFor={`filterRadio_${filter}`}
-                className="movie-filter__radio-label"
+                className="results-filter__radio-label"
             >
-                { filter }
+                {filter}
             </label>
         </React.Fragment>
     ));
 
     return (
-        <div className={`movie-filter ${className}`} role="radiogroup" aria-labelledby="radiogroupTitle">
-            <h3 id="radiogroupTitle" className="movie-filter__title">{ title }</h3>
+        <div
+            className={`results-filter ${className}`}
+            role="radiogroup"
+            aria-labelledby="radiogroupTitle"
+        >
+            <h3 id="radiogroupTitle" className="results-filter__title">
+                {title}
+            </h3>
             {filtersList}
         </div>
     );
 }
 
-MovieFilter.defaultProps = {
+ResultsFilter.defaultProps = {
     className: ''
 };
 
-MovieFilter.propTypes = {
+ResultsFilter.propTypes = {
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
     filters: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-export default MovieFilter;
+export default ResultsFilter;

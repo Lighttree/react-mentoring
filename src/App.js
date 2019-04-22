@@ -4,9 +4,14 @@ import 'normalize.css';
 import './App.scss';
 
 import ErrorBoundary from './core/ErrorBoundary';
-import MovieSearch from './search/SearchForm';
+import MovieSearch from './search/searchForm/SearchForm';
+import SearchResultsList from './search/searchResults/SearchResultsList';
+import SearchResultsBar from './search/searchResults/SearchResultsBar';
+import movies from './fixtures/movie';
 
 function App() {
+    const searchType = 'title';
+
     return (
         <div className="app">
             <header className="app__header">
@@ -20,14 +25,24 @@ function App() {
                 </div>
             </header>
             <main className="app__main">
+                <div className="app__search-results-bar">
+                    <div className="container">
+                        <ErrorBoundary>
+                            <SearchResultsBar
+                                searchResults={movies}
+                                type={searchType}
+                            />
+                        </ErrorBoundary>
+                    </div>
+                </div>
                 <div className="container">
-                Some content
+                    <ErrorBoundary>
+                        <SearchResultsList searchResults={movies} />
+                    </ErrorBoundary>
                 </div>
             </main>
             <footer className="app__footer">
-                <div className="container app__logo">
-                    netflixroulette
-                </div>
+                <div className="container app__logo">netflixroulette</div>
             </footer>
         </div>
     );
